@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net9.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SmartPartPlaceholder.bmp">
+      <CustomToolNamespace>Microsoft.Practices.CompositeUI.WinForms</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workspaces\DeckWorkspace.bmp">
+      <CustomToolNamespace>Microsoft.Practices.CompositeUI.WinForms</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workspaces\TabSmartPartInfo.bmp">
+      <CustomToolNamespace>Microsoft.Practices.CompositeUI.WinForms</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workspaces\TabWorkspace.bmp">
+      <CustomToolNamespace>Microsoft.Practices.CompositeUI.WinForms</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workspaces\WindowSmartPartInfo.bmp">
+      <CustomToolNamespace>Microsoft.Practices.CompositeUI.WinForms</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workspaces\ZoneSmartPartInfo.bmp">
+      <CustomToolNamespace>Microsoft.Practices.CompositeUI.WinForms</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workspaces\ZoneWorkspace.bmp">
+      <CustomToolNamespace>Microsoft.Practices.CompositeUI.WinForms</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CompositeUI.Upgraded\CompositeUI.Upgraded.csproj" />
+    <ProjectReference Include="..\ObjectBuilder.Upgraded\ObjectBuilder.Upgraded.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Visualizer\VisualizerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Visualizer\VisualizerForm.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
